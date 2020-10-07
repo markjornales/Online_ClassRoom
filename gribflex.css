@@ -1,0 +1,181 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: FreeMono, monospace;
+    
+}
+.main-container{
+    display: flex;
+    flex-direction: column; 
+}
+
+.header-content {
+    background-color: rgb(216,216,216);  
+    box-shadow: 0px 3px 6px 0px #a2a2a2b5;
+    padding: 5px; 
+    display: flex;
+    flex-direction: row;
+
+}
+.logo {
+    display: flex;
+}
+.logo label {
+    text-transform: uppercase;
+    color: rgb(92, 90, 90);
+    padding-top: 1em;
+    padding-left: 1em;
+}
+.header-content > .logo {
+    padding-left: 1em;
+}
+ .header-content  div {
+  flex: 1;
+ }
+ .menu-header ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    list-style: none;
+    
+ }
+ .menu-header {
+     padding-right: 1em;
+ }
+ .menu-header ul li {
+     margin-left: 1em;
+     
+ }
+ 
+ .menu-header ul li a {
+     color: rgb(76 76 76);
+     text-decoration: none;
+ }
+
+.body-content { 
+    display: grid;
+    grid-template-columns: 15% 3fr;
+    grid-template-rows: auto 250px;
+    grid-gap: 1em;
+    padding: 1em;
+}
+.courses-and-rooms {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+.class1 {
+    padding: 10px;
+    
+}
+.class2 {
+    background-color: darkseagreen;
+}
+.class3 {
+    background-color: darkturquoise;
+}
+.class4{
+    background-color: darkgrey;
+}
+.class-rooms {
+    display: flex;
+    flex-direction: column; 
+    color: rgb(76 76 76);
+    box-shadow: -2px 5px 4px #afafaf;
+}
+.class-room-title{
+    background-color: #24a587;
+    background: url('png-jpg-gif-featured-image.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 20vh;
+}
+
+.class-room-discription {
+    height: 10vh;
+}
+.class-room-title,
+.class-room-discription {
+    padding: 10px;
+}
+
+.content-menu {
+     grid-row: 1/ span 2;
+     height: 80vh; 
+     padding: 16px;
+     background-color: rgb(216,216,216);  
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     box-shadow: 2px 2px 3px #a9a9a9ee;
+}
+
+
+.img-profile {
+    display: flex; 
+    justify-content: center;
+}
+.profile-info {
+    padding-left: 1em;
+    margin-top: 1em;
+}
+.profile-info ul {
+    color: rgb(76 76 76);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.profile-info ul li {
+    margin-top: 3px;
+}
+ 
+.menu-items { 
+    height: 100%;
+    
+}
+.content-items{  
+
+}
+
+.informations{ 
+    background-color: rgb(216,216,216);
+    box-shadow: rgba(169, 169, 169, 0.933) 2px 2px 3px
+}
+
+.profile-info ul li label {
+    vertical-align: top
+}
+.footer-content {  
+    background-color: rgb(154 154 154);
+    color: rgb(241 241 241);
+    padding: 20px; 
+}
+.edit-btn > button {
+    background-color: #969696;
+    border: 0;
+    color: #eeee;
+    outline: 0;
+    cursor: pointer;
+}
+.logout-btn > button {
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    color: #716969;
+}
+.logout-btn > button:active {
+    background-color: #ffffffd9
+}
+
+.edit-btn > button:active {
+    background-color: #b3b1b1;
+}
+.edit-btn > button,
+.logout-btn > button{
+    padding: 1em;
+    width: 100%;
+    margin-top: 5px;
+    text-transform: uppercase;
+}
+ 
