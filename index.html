@@ -9,38 +9,36 @@
 <body>
     <div class="main-container">
         <div class="header-content">
-            <div class="logo">
-                <img src="https://img.pngio.com/school-building-icon-png-50-px-school-png-1600_1600.png" 
-                alt="logo" height="50" width="50"> 
-                <label for="">Online Classroom</label>  
+            <div class="button-nav">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
             </div>
-            <div class="menu-header">
+            <div class="logo">
+                <img src="./images/classroom_logo.png" alt="logo" height="50" width="50"> 
+                <label for="">Online Classroom</label> 
+            </div>
+            <div class="menu-header"> 
                 <ul>
-                    <li><img src="iconfinder_plus_925914.png" width="10" height="10" alt=""></li>
-                    <li><a href="#">Create Class</a></li>
-                    <li><a href="#">Join Class</a></li>
+                    <li class="active"><span class="addClass"></span></li>
+                    <li class="c-class"><a href="#">Create Class</a></li>
+                    <li class="j-class"><a href="#">Join Class</a></li>
                 </ul>
             </div>
-
         </div>
         <div class="body-content">
             <div class="content-menu">
                 <div class="img-prof">
                     <div class="img-profile">
-                        <img src="https://img.pngio.com/deafult-profile-icon-png-image-free-download-searchpngcom-profile-icon-png-673_673.png" 
-                        alt="profile-img" width="150" height="150">
+                        <span class="profile-picture"></span>
                     </div>
                     <div class="profile-info">
                         <ul>
-                            <li>
-                                <img src="Checked User Male_20px_1.png" alt="name">
+                            <li class="menu-profile-name">
                                 <label>Juan Dela Cruz</label></li>
-                            <li>
-                                <img src="Certificate_20px.png" alt="">
-                                <label> Information Technology</label></li>
-                            <li>
-                                <img src="Tie_20px.png" alt="">
-                                <label> 4th Year</label></li>
+                            <li class="color-info"><label> Information Technology</label></li>
+                            <li class="color-info"><label> 4th Year</label>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -57,28 +55,51 @@
                <div class="courses-and-rooms">
                    <div class="class1">
                        <div class="class-rooms">
-                           <div class="class-room-title">IT 101</div>
-                           <div class="class-room-discription">Every Tuesday</div>
+                           <div class="class-room-title">
+                               <div>
+                                  <label class="subject">IT 101</label>
+                                  <label>Teacher, Paul Januard</label>
+                               </div>
+                               <span class="classroom-profile-pic"></span>
+                            </div>
+                           <div class="class-room-discription">
+                              <label>Every Tuesday</label>
+                              <label >Upcoming Assignments</label>
+                            </div>
                        </div>
                    </div>
-                   <div class="class2">
-                       class 2
+                   <div class="class1">
+                       <div class="class-rooms">
+                           <div class="class-room-title">
+                               <div>
+                                  <label class="subject">IT 101</label>
+                                  <label>Teacher, Paul Januard</label>
+                               </div>
+                               <span class="classroom-profile-pic"></span>
+                            </div>
+                           <div class="class-room-discription">
+                              <label>Every Tuesday</label>
+                              <label >Upcoming Assignments</label>
+                            </div>
+                       </div>
                    </div>
-                   <div class="class3">
-                        class3
-                   </div>
-                   <div class="class4">
-                        class4
-                    </div>
                </div>
             </div>
             <div class="informations">
-                 
+                 ano kaya pweding ilagay dito? 
             </div>
         </div>
         <div class="footer-content">
-            footer
+            <div class="copyright-page">CopyRight&copy;2020</div>
+            <div>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#question">Ask question</a></li>
+                </ul>
+            </div>
         </div>
     </div>
+    <script src="classroom.js"></script>
 </body>
 </html>
