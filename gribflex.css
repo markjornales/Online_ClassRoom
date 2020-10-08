@@ -15,10 +15,10 @@ html, body {
     padding: 5px; 
     display: flex;
     flex-direction: row;
-
 }
 .logo {
     display: flex;
+
 }
 .logo label {
     text-transform: uppercase;
@@ -29,16 +29,19 @@ html, body {
 .header-content > .logo {
     padding-left: 1em;
 }
- .header-content  div {
+
+ .header-content ,
+ .logo,
+ .menu-header {
   flex: 1;
- }
+ } 
  .menu-header ul {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     list-style: none;
-    
  }
+
  .menu-header {
      padding-right: 1em;
  }
@@ -51,7 +54,6 @@ html, body {
      color: rgb(76 76 76);
      text-decoration: none;
  }
-
 .body-content { 
     display: grid;
     grid-template-columns: 15% 3fr;
@@ -83,42 +85,92 @@ html, body {
     flex-direction: column; 
     color: rgb(76 76 76);
     box-shadow: -2px 5px 4px #afafaf;
+    border-radius: 5px;
+}
+.class-rooms:hover {
+    box-shadow: -2px 5px 11px #afafaf;
+    cursor: pointer;
 }
 .class-room-title{
     background-color: #24a587;
-    background: url('png-jpg-gif-featured-image.jpg');
-    background-size: cover;
+    background: url('./images/png-jpg-gif-featured-image.jpg');
+    background-size: cover; 
     background-repeat: no-repeat;
     height: 20vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   
 }
-
+.class-room-title .subject {
+    font-weight: bold;
+    font-size: 20px;
+}
+.class-room-title div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    order: 2; 
+    font-size: 15px;
+}
+.class-room-title div label {
+    display: flex;
+    justify-content: flex-end; 
+}
+.classroom-profile-pic {
+    order: 1;
+    height: 75px;
+    width: 75px;
+    background-color: rgb(189 189 189);
+    border-radius: 50%;
+    background: url('./images/profilepic.png');
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
 .class-room-discription {
     height: 10vh;
+    display: flex;
+    flex-direction: column;
 }
 .class-room-title,
 .class-room-discription {
     padding: 10px;
+    border-radius: 5px;
 }
-
 .content-menu {
      grid-row: 1/ span 2;
      height: 80vh; 
-     padding: 16px;
+     padding: 10px;
      background-color: rgb(216,216,216);  
+     border-radius: 5px;
      display: flex;
      flex-direction: column;
      justify-content: space-between;
      box-shadow: 2px 2px 3px #a9a9a9ee;
 }
-
-
 .img-profile {
     display: flex; 
     justify-content: center;
 }
+.profile-picture {
+    height: 150px;
+    width: 150px;
+    background-color: rgb(189 189 189);
+    border-radius: 50%;
+    background: url('./images/profilepic.png');
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+.menu-profile-name{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
 .profile-info {
     padding-left: 1em;
-    margin-top: 1em;
+    margin-top: 5px;
 }
 .profile-info ul {
     color: rgb(76 76 76);
@@ -129,18 +181,17 @@ html, body {
 .profile-info ul li {
     margin-top: 3px;
 }
- 
+.color-info { 
+    margin-bottom: 5px;
+    color: #6d6d6d;
+} 
 .menu-items { 
     height: 100%;
-    
-}
-.content-items{  
-
-}
-
+}   
 .informations{ 
     background-color: rgb(216,216,216);
-    box-shadow: rgba(169, 169, 169, 0.933) 2px 2px 3px
+    box-shadow: rgba(169, 169, 169, 0.933) 2px 2px 3px;
+    border-radius: 5px;
 }
 
 .profile-info ul li label {
@@ -149,8 +200,29 @@ html, body {
 .footer-content {  
     background-color: rgb(154 154 154);
     color: rgb(241 241 241);
-    padding: 20px; 
+    padding: 10px;  
+   
 }
+.footer-content ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.footer-content .copyright-page {
+    display: flex;
+    justify-content: center;
+    color: #5f5f5fee;
+    margin-left: 3em;
+}
+.footer-content ul li a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #5a5a5a;
+}
+ 
 .edit-btn > button {
     background-color: #969696;
     border: 0;
@@ -178,4 +250,85 @@ html, body {
     margin-top: 5px;
     text-transform: uppercase;
 }
- 
+.menu-header ul
+.active {
+    display: none;
+
+}
+.addClass{
+    display: flex;
+    background: url('./images/iconfinder_plus_925914.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 15px;
+    width: 15px;
+    cursor: pointer;
+ } 
+
+@media screen and (max-width: 1423px) {
+    .courses-and-rooms {
+        grid-template-columns: 1fr 1fr;
+    }
+    .body-content {
+        grid-template-columns: 20% 3fr;
+    }
+   
+}
+
+@media screen and (max-width: 850px){
+    .courses-and-rooms {
+        grid-template-columns: 1fr;
+    }
+    .content-menu {
+        display: none;
+    }
+    .body-content {
+        grid-template-columns: 3fr;
+    }
+    .button-nav{
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        z-index: 1;
+        width: 50px;
+    }
+
+    .button-nav .line{ 
+        transform: translate(7px, 15px);
+        background-color: rgb(143, 143, 143);
+        width: 30px;
+        height: 4px;
+        margin: 2px;
+    }
+    .menu-header ul
+    .active  {
+        display: flex;
+    }
+    .menu-header ul .c-class,
+    .menu-header ul .j-class  {
+        display: none   ;
+    }
+    .content-menu.btnOpen {
+        position: fixed;
+        display: flex;
+        justify-content: flex-start;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+    body.removeScroll {
+        overflow: hidden;
+    }
+/* .content-menu {
+    position: fixed;
+    display: flex;
+    justify-content: flex-start;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+ }
+*/
+}
+
