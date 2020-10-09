@@ -1,8 +1,11 @@
+
+* {
+    box-sizing: border-box;
+}
 html, body {
     margin: 0;
     padding: 0;
     font-family: FreeMono, monospace;
-    
 }
 .main-container{
     display: flex;
@@ -35,7 +38,7 @@ html, body {
  .menu-header {
   flex: 1;
  } 
- .menu-header ul {
+ .menu-header .menu-classroom {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -45,10 +48,10 @@ html, body {
  .menu-header {
      padding-right: 1em;
  }
+
  .menu-header ul li {
      margin-left: 1em;
-     
- }
+ } 
  
  .menu-header ul li a {
      color: rgb(76 76 76);
@@ -200,8 +203,7 @@ html, body {
 .footer-content {  
     background-color: rgb(154 154 154);
     color: rgb(241 241 241);
-    padding: 10px;  
-   
+    padding: 12px;  
 }
 .footer-content ul {
     display: flex;
@@ -222,7 +224,6 @@ html, body {
     text-decoration: none;
     color: #5a5a5a;
 }
- 
 .edit-btn > button {
     background-color: #969696;
     border: 0;
@@ -250,11 +251,7 @@ html, body {
     margin-top: 5px;
     text-transform: uppercase;
 }
-.menu-header ul
-.active {
-    display: none;
 
-}
 .addClass{
     display: flex;
     background: url('./images/iconfinder_plus_925914.png');
@@ -264,7 +261,9 @@ html, body {
     width: 15px;
     cursor: pointer;
  } 
-
+ .plus-menu {
+    display: none;
+}
 @media screen and (max-width: 1423px) {
     .courses-and-rooms {
         grid-template-columns: 1fr 1fr;
@@ -300,14 +299,6 @@ html, body {
         height: 4px;
         margin: 2px;
     }
-    .menu-header ul
-    .active  {
-        display: flex;
-    }
-    .menu-header ul .c-class,
-    .menu-header ul .j-class  {
-        display: none   ;
-    }
     .content-menu.btnOpen {
         position: fixed;
         display: flex;
@@ -320,15 +311,42 @@ html, body {
     body.removeScroll {
         overflow: hidden;
     }
-/* .content-menu {
-    position: fixed;
-    display: flex;
-    justify-content: flex-start;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
- }
-*/
+    .menu-header .menu-classroom{
+        display: none;
+    }
+   .plus-menu {
+       display: block;
+       list-style: none;
+   }
+   .menu-header
+    {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .drop-downmenu.openmenu {
+        display: block;
+        background-color: #c7c7c7;
+        position: absolute;
+        padding: 0;
+        box-shadow: 3px 2px 3px #61616194;
+        transform: translate(-125px, -20px);
+        color: #1f1b1bee;
+        border-radius: 2px;
+    }
+    .drop-downmenu {
+        display: none;
+    }
+    .drop-downmenu ul  {
+        list-style: none;
+        padding: 0;
+        width: 9em;
+    }
+    .drop-downmenu ul li {
+        margin: 14px;
+            padding-left: 4px; 
+    }
+     
+    
 }
 
+ 
