@@ -60,7 +60,7 @@ html, body {
 .body-content { 
     display: grid;
     grid-template-columns: 15% 3fr;
-    grid-template-rows: auto 250px;
+    grid-template-rows: auto 250px ;
     grid-gap: 1em;
     padding: 1em;
 }
@@ -94,6 +94,7 @@ html, body {
     box-shadow: -2px 5px 11px #afafaf;
     cursor: pointer;
 }
+
 .class-room-title{
     background-color: #24a587;
     background: url('./images/png-jpg-gif-featured-image.jpg');
@@ -103,8 +104,14 @@ html, body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-   
 }
+
+.class-room-title-2{
+    background: url('./images/socialpeople.png');
+    background-size: cover; 
+    background-repeat: no-repeat;
+}
+
 .class-room-title .subject {
     font-weight: bold;
     font-size: 20px;
@@ -299,13 +306,17 @@ html, body {
         height: 4px;
         margin: 2px;
     }
-    .content-menu.btnOpen {
+    .btnOpen {
         position: fixed;
         display: flex;
         justify-content: flex-start;
         height: 100%;
         width: 100%;
         top: 0;
+        left: -1000px;
+        transition: 0.5s;
+    }
+    .btnOpen.active { 
         left: 0;
     }
     body.removeScroll {
